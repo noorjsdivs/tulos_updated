@@ -3,10 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SanityLive } from "@/sanity/lib/live";
 import { Toaster } from "react-hot-toast";
-import { VisualEditing } from "next-sanity";
-import { draftMode } from "next/headers";
-import DisableDraftMode from "@/components/DisableDraftMode";
 import ChatIcon from "@/components/new/ChatIcon";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Ecommerce App for Shoppers",
@@ -19,13 +17,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      {(await draftMode()).isEnabled && (
-        <>
-          <DisableDraftMode />
-          <VisualEditing />
-        </>
-      )}
+    <ClerkProvider>
       <Header />
       {children}
       <Footer />
@@ -40,6 +32,6 @@ export default async function RootLayout({
       />
       <SanityLive />
       <ChatIcon />
-    </div>
+    </ClerkProvider>
   );
 }

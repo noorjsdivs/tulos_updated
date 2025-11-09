@@ -1,5 +1,4 @@
 import React from "react";
-import { ClerkProvider } from "@clerk/nextjs";
 import localFont from "next/font/local";
 import { Metadata } from "next";
 import "./globals.css";
@@ -27,13 +26,11 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`${poppins.variable} ${raleway.variable} antialiased`}>
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={`${poppins.variable} ${raleway.variable} antialiased`}>
+        {children}
+      </body>
+    </html>
   );
 };
 
