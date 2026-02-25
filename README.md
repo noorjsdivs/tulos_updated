@@ -3,7 +3,17 @@
 This is a Next.js-based ecommerce application template integrated with Sanity for content management, Clerk for authentication, Stripe for payments, and Sendbird for chat functionality.
 Follow the steps below to set up and customize the application.
 
-## 🔗 Preview
+## � Get Premium Source Code
+
+[![Get Premium Source Code](https://img.shields.io/badge/Get%20Premium%20Source%20Code-Buy%20Now-brightgreen?style=for-the-badge)](https://buymeacoffee.com/reactbd/e/345823)
+
+> **Purchase the complete premium source code with all features, lifetime updates, and premium support.**
+>
+> 🔗 **[https://reactbd.com/tulos](https://reactbd.com/tulos)**
+
+---
+
+## �🔗 Preview
 
 ## ![Dashboard Preview](/public/preview_image.png)
 
@@ -46,19 +56,17 @@ NEXT_PUBLIC_SANITY_DATASET: Set to production.
 The application requires additional environment variables beyond those set in Step 2. Edit your .env file in the project root to include the following:
 
 ```bash
-
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
-NEXT_PUBLIC_SANITY_PROJECT_ID=<already-set-by-step-2>
+NEXT_PUBLIC_SANITY_PROJECT_ID=pyh5dp7x
 NEXT_PUBLIC_SANITY_DATASET=production
-NEXT_PUBLIC_SANITY_API_VERSION=2024-11-09
-SANITY_API_TOKEN=<your-sanity-api-token>
-SANITY_API_READ_TOKEN=<your-sanity-api-read-token>
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your-clerk-publishable-key>
-CLERK_SECRET_KEY=<your-clerk-secret-key>
-STRIPE_SECRET_KEY=<your-stripe-secret-key>
-STRIPE_WEBHOOK_SECRET=<your-stripe-webhook-secret>
-SENDBIRD_APP_ID=<your-sendbird-app-id>
-
+NEXT_PUBLIC_SANITY_API_VERSION=2025-02-19
+SANITY_API_TOKEN=skNR6SvwpLuPxVsoXAXtI5EyxfF04zRxPwIpZ8iWybLV4z8EUr1qm6MXYUUzyN11ng2jvKiuaUUoxS31sAlD2fiuVxHNMzT88ydFDkSmD9E2OyWRKrrRwbmIsnSm99nqoYh5pUff1qk2hXLforH3SDyYqULF7lwLT0TLoanARno3cnrakoSj
+SANITY_API_READ_TOKEN=skla2A4G5oAFPw1KhsC0MIebYaDxRGNxLwWF4LheeqLIom7hC3uj7Ed80hO0azh2iXBqzq2LEB1Fxntg14OzWMAZtbahfY5hOuSZv2iyzpqNMv6LMYpZx6PWLtdwFWgTFBqnf1NE90vynRJ1gY4jphBNOqa0I3sHpbyVxtE7OobciJjhWaxD
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_c3VwZXJiLWVtdS03Mi5jbGVyay5hY2NvdW50cy5kZXYk
+CLERK_SECRET_KEY=sk_test_iZJPgCRgNoQbsHuyOiVW2zNlMyjQlzeUidykpGNwYj
+STRIPE_SECRET_KEY=sk_test_51T4RuyGeEXC3UzFAKCgdbEGVdpRb0QreMVtuYowJ7CHjRO8218Xr6wGqdrmJkq9sEZ52hG3CaZzMyaQqifSLC6pb00dgrJEzzW
+STRIPE_WEBHOOK_SECRET=whsec_2af2408ec5f4efee49f44599d3b0ea9f352d412f6c16c0a46bb09ce93bf5eee5
+ADMIN_EMAIL=noor.jsdivs@gmail.com
 ```
 
 ### Where to Find These Credentials
@@ -122,6 +130,25 @@ To tailor the template to your needs:
 
 - Modify files in the /app and /components directories.
 - Changes will reflect instantly due to Next.js’s hot reloading feature.
+
+## Useful Commands
+
+```bash
+# Listen to Stripe webhooks locally
+stripe listen --forward-to localhost:3000/api/webhook
+
+# Export Sanity dataset
+sanity dataset export production ./seed.tar.gz
+
+# Import Sanity dataset
+npx sanity@latest dataset import seed.tar.gz
+```
+
+## References
+
+- **Live Demo:** [https://tulos.reactbd.com](https://tulos.reactbd.com)
+- **Webhook URL:** https://tulos.reactbd.com/api/webhook
+- **Design Inspiration:** [Dribbble - Ecommerce Fashion Web](https://dribbble.com/shots/22963771-Ecommerce-Fashion-Web)
 
 ## License
 
